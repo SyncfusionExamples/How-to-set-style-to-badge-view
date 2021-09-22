@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BadgeView"
+             x:Class="BadgeView.MainPage"
+             xmlns:badge ="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BadgeViewStyle" TargetType="badge:SfBadgeView">
+                <Setter Property="BadgeText">New User</Setter>
+                <Setter Property="BadgeSettings">
+                    <Setter.Value>
+                        <badge:BadgeSetting BadgePosition="BottomRight" BackgroundColor="Green" CornerRadius="5"
+                                     Offset="-15,-8"   BadgeType="None"   StrokeWidth="2" Stroke="Black"  BadgeIcon="Busy" BadgeAlignment="Start" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" Style="{StaticResource BadgeViewStyle}">
+            <badge:SfBadgeView.Content>
+                <Image Source="People_Circle1.png"   VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           HeightRequest="100" WidthRequest="100"/>
+            </badge:SfBadgeView.Content>
+        </badge:SfBadgeView>
+    </ContentPage.Content>
+</ContentPage>
