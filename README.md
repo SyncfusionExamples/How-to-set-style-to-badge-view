@@ -1,39 +1,52 @@
-# How-to-set-style-to-badge-view
-This repository contains sample for setting style to the badge view
+# How to set style to badge view
 
-This article explains how to set the style of the Xamarin.Forms badge view. 
+This repository contains sample for setting style to [Syncfusion Xamarin.Forms Badge View](https://help.syncfusion.com/xamarin/badge-view/getting-started) control.
 
-By using BadgeSettings property we can customize and apply style to the badge view as like in below code snippet.
+Please refer the KB through this [link](https://www.syncfusion.com/kb/12867/how-to-apply-style-to-the-xamarin-forms-badge-view-control).
 
-[XAML]
-```
-  <Style x:Key="BadgeViewStyle" TargetType="badge:SfBadgeView">
-                <Setter Property="BadgeText">New User</Setter>
-                <Setter Property="BadgeSettings">
-                    <Setter.Value>
-                        <badge:BadgeSetting BadgePosition="BottomRight" BackgroundColor="Green" CornerRadius="5"
-                                     Offset="-15,-8"   BadgeType="None"   StrokeWidth="2" Stroke="Black"  BadgeIcon="Busy" BadgeAlignment="Start" />
-                    </Setter.Value>
-                </Setter>
-            </Style>
+## Syncfusion controls:
 
-        …
+This project used the following Syncfusion control(s):
+* [SfBadgeView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-badge-view)
 
-        <badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" Style="{StaticResource BadgeViewStyle}">
-            <badge:SfBadgeView.Content>
-                <Image Source="People_Circle1.png"   VerticalOptions="Center"
-                           HorizontalOptions="Center"
-                           HeightRequest="100" WidthRequest="100"/>
-            </badge:SfBadgeView.Content>
-        </badge:SfBadgeView>
-````
+## Supported platforms
 
-![](Output.png)
+| Platforms | Supported versions |
+| --------- | ------------------ |
+| Android   | API level 21 and later versions |
+| iOS | iOS 9.0 and later versions |
+| UWP | Windows 10 devices |
 
-## See also
+## Requirements to run the sample
 
-[How can I customize the badge view position?](https://help.syncfusion.com/xamarin/badge-view/position-customization)
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
 
-[How can I customize the badge in Xamarin.Forms SfBadgeView?](https://help.syncfusion.com/xamarin/badge-view/badge-customization)
+Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/xamarin/system-requirements)
 
-[How can I add badge icon in badge view?](https://help.syncfusion.com/xamarin/badge-view/predefined-symbols)
+## How to run the sample
+
+1. Clone the sample and open it in Visual Studio.
+
+   *Note: If you download the sample using the "Download ZIP" option, right-click it, select Properties, and then select Unblock.*
+   
+2. Register your license key in the App.xaml.cs file as demonstrated in the following code.
+
+		public App()
+		{
+			//Register Syncfusion license
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+	
+			InitializeComponent();
+	
+			MainPage = new App1.MainPage();
+		}
+		
+	Refer to this [link](https://help.syncfusion.com/xamarin/licensing/overview) for more details.
+	
+3. Clean and build the application.
+
+4. Run the application.
+
+## License
+
+Syncfusion has no liability for any damage or consequence that may arise by using or viewing the samples. The samples are for demonstrative purposes, and if you choose to use or access the samples, you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, for accessing, or viewing the samples. By accessing, viewing, or seeing the samples, you acknowledge and agree Syncfusion’s samples will not allow you seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize, or otherwise do anything with Syncfusion’s samples.
